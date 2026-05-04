@@ -33,6 +33,7 @@ export type SectionBlock<TCard = GridCard> = {
   id: string;
   eyebrow: string;
   title: string;
+  highlightPhrases?: string[];
   description: string;
   cards: TCard[];
 };
@@ -60,6 +61,7 @@ export type HeroContent = {
   id: string;
   eyebrow: string;
   title: string;
+  highlightPhrases?: string[];
   description: string;
   primaryCta: LinkAction;
   secondaryCta?: LinkAction;
@@ -84,6 +86,7 @@ export type StepsBlock = {
   id: string;
   eyebrow: string;
   title: string;
+  highlightPhrases?: string[];
   description: string;
   items: StepItem[];
 };
@@ -97,6 +100,7 @@ export type FaqGroup = {
   id: string;
   eyebrow: string;
   title: string;
+  highlightPhrases?: string[];
   description: string;
   items: FaqItem[];
 };
@@ -105,6 +109,7 @@ export type FinalCtaContent = {
   id: string;
   eyebrow: string;
   title: string;
+  highlightPhrases?: string[];
   description: string;
   primaryCta: LinkAction;
   secondaryCta?: LinkAction;

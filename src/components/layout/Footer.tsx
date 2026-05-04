@@ -33,7 +33,13 @@ export function Footer({ brand, description, links, note, locale, actionLinks }:
               locale === 'ar' ? 'footer-main--brand-left' : 'footer-main--brand-right',
             )}
           >
-            <div className="footer-brand" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+            <div
+              className={joinClasses(
+                'footer-brand',
+                locale === 'ar' ? 'footer-brand--brand-left' : 'footer-brand--brand-right',
+              )}
+              dir={locale === 'ar' ? 'rtl' : 'ltr'}
+            >
               <Link
                 aria-label={brand.name}
                 className={joinClasses(
@@ -44,8 +50,10 @@ export function Footer({ brand, description, links, note, locale, actionLinks }:
               >
                 <BrandLogo decorative size="footer" />
               </Link>
-              <p className="footer-tag mt-4 text-sm font-semibold text-[var(--color-primary-strong)]">{brand.tag}</p>
-              <p className="footer-description body-lead mt-4 max-w-xl text-start">{description}</p>
+              <div className="footer-brand__copy">
+                <p className="footer-tag text-sm font-semibold text-[var(--color-primary-strong)]">{brand.tag}</p>
+                <p className="footer-description body-lead max-w-xl text-start">{description}</p>
+              </div>
             </div>
 
             <div className="footer-links" dir={locale === 'ar' ? 'rtl' : 'ltr'}>

@@ -78,14 +78,53 @@ function ShowcasePromoCard({ item, fallbackImage }: ShowcasePromoCardProps) {
   );
 }
 
+type StageSupportCardProps = {
+  card: GridCard;
+  imageSrc: string;
+};
+
+function StageSupportCard({ card, imageSrc }: StageSupportCardProps) {
+  return (
+    <div className="stage-support-card stage-support-card--player rounded-[1.5rem] border border-[var(--color-border-soft)] p-3 sm:p-4">
+      <CardMedia
+        imageAlt={card.title}
+        imageSrc={imageSrc}
+        tone="stage"
+        variant="compact"
+      />
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <div className="stage-support-card__eyebrow">
+            {card.eyebrow}
+          </div>
+          <h4 className="stage-support-card__title">
+            {card.title}
+          </h4>
+        </div>
+        {card.metric ? (
+          <span
+            className="stage-support-card__metric"
+            dir="auto"
+          >
+            {card.metric}
+          </span>
+        ) : null}
+      </div>
+      <p className="stage-support-card__description">{card.description}</p>
+      {card.footnote ? (
+        <p className="mt-3 text-xs leading-6 text-[var(--color-primary-strong)]">{card.footnote}</p>
+      ) : null}
+    </div>
+  );
+}
+
 export function PlayerStage({ badge, title, note, chips, cards, showcase }: PlayerStageProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [leadCard, ...supportCards] = cards;
   const stageShowcase = showcase ?? [];
-  const primaryShowcase = stageShowcase[0];
-  const showcaseSlides = stageShowcase.length > 1 ? stageShowcase.slice(1) : stageShowcase;
+  const showcaseSlides = stageShowcase;
   const showcaseSupportCards = supportCards.slice(0, 2);
-  const hasFourCardShowcase = Boolean(primaryShowcase && showcaseSlides.length && showcaseSupportCards.length === 2);
+  const hasFourCardShowcase = Boolean(leadCard && showcaseSlides.length && showcaseSupportCards.length === 2);
   const currentShowcaseIndex = showcaseSlides.length ? activeIndex % showcaseSlides.length : 0;
   const heroStageImages = [
     '/home/hero/football.png',
@@ -124,19 +163,14 @@ export function PlayerStage({ badge, title, note, chips, cards, showcase }: Play
         <div className="stage-card-grid">
           {hasFourCardShowcase ? (
             <>
-              <div
-                className="stage-support-card stage-support-card--player stage-support-card--showcase rounded-[1.5rem] border border-[var(--color-border-soft)] p-4"
-                data-float
-              >
-                <ShowcasePromoCard fallbackImage={heroStageImages[0]} item={primaryShowcase} />
-              </div>
-              <div className="stage-support-card stage-support-card--player stage-support-card--showcase rounded-[1.5rem] border border-[var(--color-border-soft)] p-4">
+              <StageSupportCard card={leadCard} imageSrc={heroStageImages[0]} />
+              <div className="stage-support-card stage-support-card--player stage-support-card--showcase rounded-[1.5rem] border border-[var(--color-border-soft)] p-3 sm:p-4">
                 <div className="stage-showcase stage-showcase--card">
                   <div className="stage-showcase__viewport">
                     <div className="stage-showcase__track" style={{ transform: `translateX(-${currentShowcaseIndex * 100}%)` }}>
-                      {showcaseSlides.map((item) => (
+                      {showcaseSlides.map((item, index) => (
                         <article className="stage-showcase__slide" key={`${item.title}-${item.gameName}`}>
-                          <ShowcasePromoCard fallbackImage={heroStageImages[1]} item={item} />
+                          <ShowcasePromoCard fallbackImage={heroStageImages[index % heroStageImages.length]} item={item} />
                         </article>
                       ))}
                     </div>
@@ -144,40 +178,7 @@ export function PlayerStage({ badge, title, note, chips, cards, showcase }: Play
                 </div>
               </div>
               {showcaseSupportCards.map((card, index) => (
-                <div
-                  className="stage-support-card stage-support-card--player rounded-[1.5rem] border border-[var(--color-border-soft)] p-4"
-                  data-float
-                  key={card.title}
-                >
-                  <CardMedia
-                    imageAlt={card.title}
-                    imageSrc={heroStageImages[index + 1]}
-                    tone="stage"
-                    variant="compact"
-                  />
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <div className="stage-support-card__eyebrow">
-                        {card.eyebrow}
-                      </div>
-                      <h4 className="stage-support-card__title">
-                        {card.title}
-                      </h4>
-                    </div>
-                    {card.metric ? (
-                      <span
-                        className="stage-support-card__metric"
-                        dir="auto"
-                      >
-                        {card.metric}
-                      </span>
-                    ) : null}
-                  </div>
-                  <p className="stage-support-card__description">{card.description}</p>
-                  {card.footnote ? (
-                    <p className="mt-3 text-xs leading-6 text-[var(--color-primary-strong)]">{card.footnote}</p>
-                  ) : null}
-                </div>
+                <StageSupportCard card={card} imageSrc={heroStageImages[index + 1]} key={card.title} />
               ))}
             </>
           ) : (

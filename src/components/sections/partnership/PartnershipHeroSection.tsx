@@ -12,6 +12,8 @@ type PartnershipHeroSectionProps = {
 };
 
 export function PartnershipHeroSection({ hero }: PartnershipHeroSectionProps) {
+  const glowPhrases = hero.highlightPhrases ?? ['Partner', 'partner', 'Agent', 'agent'];
+
   return (
     <section className="hero-section hero-section--partner section-pad pt-8 sm:pt-10" id={hero.id}>
       <div aria-hidden="true" className="hero-section__scene">
@@ -28,10 +30,7 @@ export function PartnershipHeroSection({ hero }: PartnershipHeroSectionProps) {
               <Eyebrow>{hero.eyebrow}</Eyebrow>
             </div>
             <h1 className="hero-display mt-5 max-w-2xl text-start" data-reveal>
-              <HighlightedText
-                phrases={['Partner', 'partner', 'Agent', 'agent', 'الشراكة', 'شريك', 'وكيل']}
-                text={hero.title}
-              />
+              <HighlightedText phrases={glowPhrases} text={hero.title} />
             </h1>
             <p className="body-lead mt-5 max-w-2xl text-start" data-reveal>
               {hero.description}

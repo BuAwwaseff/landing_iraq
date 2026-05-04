@@ -2,6 +2,7 @@ export type ThemeTokens = {
   color: {
     bg: string;
     bgTop: string;
+    bgBottom?: string;
     foreground: string;
     foregroundSoft: string;
     primary: string;
@@ -67,12 +68,13 @@ export const baseTheme: ThemeTokens = {
   color: {
     bg: '#080808',
     bgTop: '#121212',
+    bgBottom: '#030303',
     foreground: '#f4ead7',
     foregroundSoft: '#d0c4b2',
     primary: '#d8a131',
     primarySoft: 'rgba(216, 161, 49, 0.12)',
     primaryStrong: '#f0c25b',
-    highlight: '#9ed6d0',
+    highlight: '#d4d7aa',
     secondary: '#f4ead7',
     surface: '#151312',
     surfaceStrong: '#1b1816',

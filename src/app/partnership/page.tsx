@@ -22,12 +22,16 @@ export default async function PartnershipPage() {
   const locale = await getRequestLocale();
   const content = getIraqContent(locale);
   const { partnership } = content;
+  const routeCardCta = {
+    label: locale === 'ar' ? 'تواصل الآن' : 'Contact Now',
+    href: '#final-cta',
+  };
 
   return (
     <MarketPageShell content={content} page="partnership">
       <PartnershipHeroSection hero={partnership.hero} />
       <FeatureGridSection section={partnership.benefits} tone="opportunity" variant="accent" />
-      <FeatureGridSection section={partnership.routes} tone="routes" />
+      <FeatureGridSection cardCta={routeCardCta} section={partnership.routes} tone="routes" />
       <FeatureGridSection section={partnership.tools} tone="tools" variant="accent" />
       <StepsSection section={partnership.steps} tone="onboarding" />
       <PartnershipContactCtaSection content={partnership.finalCta} />

@@ -36,10 +36,7 @@ export default async function FaqPage() {
                 <Eyebrow>{faq.intro.eyebrow}</Eyebrow>
               </div>
               <h1 className="section-heading faq-intro__title mt-4 text-start" data-reveal>
-                <HighlightedText
-                  phrases={['FAQ', 'Players', 'Partnership', 'اللاعبين', 'الشراكة']}
-                  text={faq.intro.title}
-                />
+                <HighlightedText phrases={faq.intro.highlightPhrases} text={faq.intro.title} />
               </h1>
               <p className="body-lead mt-4 max-w-2xl text-start" data-reveal>
                 {faq.intro.description}
@@ -61,7 +58,9 @@ export default async function FaqPage() {
             <div className="faq-column" data-reveal="scale" id={faq.player.id}>
               <div className="faq-column__intro text-start">
                 <Eyebrow>{faq.player.eyebrow}</Eyebrow>
-                <h2 className="section-heading mt-4 text-start">{faq.player.title}</h2>
+                <h2 className="section-heading mt-4 text-start">
+                  <HighlightedText phrases={faq.player.highlightPhrases} text={faq.player.title} />
+                </h2>
                 <p className="body-lead mt-4 text-start">{faq.player.description}</p>
               </div>
               <SurfaceCard className="faq-group-card p-5 sm:p-6" data-hover="lift">
@@ -76,7 +75,9 @@ export default async function FaqPage() {
             <div className="faq-column" data-reveal="scale" id={faq.partnership.id}>
               <div className="faq-column__intro text-start">
                 <Eyebrow>{faq.partnership.eyebrow}</Eyebrow>
-                <h2 className="section-heading mt-4 text-start">{faq.partnership.title}</h2>
+                <h2 className="section-heading mt-4 text-start">
+                  <HighlightedText phrases={faq.partnership.highlightPhrases} text={faq.partnership.title} />
+                </h2>
                 <p className="body-lead mt-4 text-start">{faq.partnership.description}</p>
               </div>
               <SurfaceCard className="faq-group-card faq-group-card--accent p-5 sm:p-6" data-hover="lift" variant="accent">

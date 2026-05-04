@@ -46,7 +46,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           ...themeVariables,
           margin: 0,
           minHeight: '100vh',
-          background: '#050505',
+          background: `linear-gradient(180deg, ${iraqTheme.color.bgTop} 0%, ${iraqTheme.color.bg} 42%, ${iraqTheme.color.bgBottom ?? iraqTheme.color.bg} 100%)`,
           color: iraqTheme.color.foreground,
           fontFamily: iraqTheme.type.body,
           overflowX: 'clip',

@@ -18,6 +18,7 @@ type CardMediaProps = {
   variant?: 'default' | 'compact' | 'banner';
   className?: string;
   imageSrc?: string;
+  videoSrc?: string;
   imageAlt?: string;
   sizes?: string;
 };
@@ -39,16 +40,35 @@ export function CardMedia({
   variant = 'default',
   className,
   imageSrc,
+  videoSrc,
   imageAlt = '',
   sizes,
 }: CardMediaProps) {
+  const hasVisual = Boolean(imageSrc || videoSrc);
+
   return (
     <div
       aria-hidden="true"
       className={joinClasses('card-media', `card-media--${tone}`, `card-media--${variant}`, className)}
-      data-has-image={imageSrc ? 'true' : 'false'}
+      data-has-image={hasVisual ? 'true' : 'false'}
     >
-      {imageSrc ? (
+      {videoSrc ? (
+        <>
+          <video
+            autoPlay
+            className="card-media__video"
+            disablePictureInPicture
+            loop
+            muted
+            playsInline
+            poster={imageSrc}
+            preload="metadata"
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+          <span className="card-media__image-overlay" />
+        </>
+      ) : imageSrc ? (
         <>
           <Image
             alt={imageAlt}

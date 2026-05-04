@@ -16,6 +16,7 @@ export function StepsSection({ section, tone = 'onboarding' }: StepsSectionProps
       <SectionShell
         description={section.description}
         eyebrow={section.eyebrow}
+        highlightPhrases={section.highlightPhrases}
         id={section.id}
         tone={tone}
         title={section.title}

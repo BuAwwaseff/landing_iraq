@@ -6,6 +6,7 @@ export function themeToCssVariables(theme: ThemeTokens): CSSProperties {
   const variables: CSSProperties & Record<`--${string}`, string> = {
     '--color-bg': theme.color.bg,
     '--color-bg-top': theme.color.bgTop,
+    '--color-bg-bottom': theme.color.bgBottom ?? theme.color.bg,
     '--color-foreground': theme.color.foreground,
     '--color-foreground-soft': theme.color.foregroundSoft,
     '--color-primary': theme.color.primary,

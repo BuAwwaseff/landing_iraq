@@ -1,7 +1,8 @@
-import type { GridCard, SectionBlock } from '@/content/markets/types';
+import type { GridCard, LinkAction, SectionBlock } from '@/content/markets/types';
 
 import { RevealGroup } from '@/components/motion/RevealGroup';
 import { SectionShell, type SectionTone } from '@/components/layout/SectionShell';
+import { Button } from '@/components/ui/Button';
 import { CardMedia } from '@/components/ui/CardMedia';
 import { SurfaceCard } from '@/components/ui/SurfaceCard';
 import { joinClasses } from '@/lib/classes';
@@ -10,6 +11,7 @@ type FeatureGridSectionProps = {
   section: SectionBlock;
   variant?: 'media' | 'accent' | 'default';
   tone?: SectionTone;
+  cardCta?: LinkAction;
 };
 
 function getSectionImage(sectionId: string, index: number) {
@@ -74,6 +76,14 @@ function getSectionImage(sectionId: string, index: number) {
   return undefined;
 }
 
+function getSectionVideo(sectionId: string, index: number) {
+  if (sectionId === 'routes') {
+    return ['/partnership/routes/partner.mp4', '/partnership/routes/agent.mp4'][index];
+  }
+
+  return undefined;
+}
+
 function getCardVariant(
   variant: FeatureGridSectionProps['variant'],
 ): 'default' | 'accent' | 'media' {
@@ -128,6 +138,7 @@ export function FeatureGridSection({
   section,
   variant = 'default',
   tone = 'default',
+  cardCta,
 }: FeatureGridSectionProps) {
   const isWhyPartnerSection = section.id === 'why-partner';
   const isRouteSection = section.id === 'routes';
@@ -135,7 +146,7 @@ export function FeatureGridSection({
   const imageSizes = getGridImageSizes(section.cards);
   const fixedCardClass =
     isRouteSection
-      ? 'min-h-[24rem] xl:min-h-[25rem]'
+      ? 'min-h-[30rem] xl:min-h-[31rem]'
       : 'min-h-[21.5rem] xl:min-h-[22.5rem]';
 
   return (
@@ -144,7 +155,7 @@ export function FeatureGridSection({
         className="pb-2"
         description={section.description}
         eyebrow={section.eyebrow}
-        highlightPhrases={getSectionGlowPhrases(tone)}
+        highlightPhrases={section.highlightPhrases ?? getSectionGlowPhrases(tone)}
         id={section.id}
         tone={tone}
         title={section.title}
@@ -163,11 +174,16 @@ export function FeatureGridSection({
               variant={getCardVariant(variant)}
             >
               <CardMedia
-                className={joinClasses('feature-card__media', variant === 'media' && 'card-media--washed')}
+                className={joinClasses(
+                  'feature-card__media -mx-4 -mt-4 sm:-mx-5 sm:-mt-5',
+                  isRouteSection && 'feature-card__media--routes',
+                  variant === 'media' && 'card-media--washed',
+                )}
                 imageAlt={card.title}
                 imageSrc={getSectionImage(section.id, index)}
                 sizes={imageSizes}
                 tone={tone}
+                videoSrc={getSectionVideo(section.id, index)}
               />
               <div className="relative feature-card__body">
                 {card.eyebrow ? (
@@ -206,6 +222,11 @@ export function FeatureGridSection({
                 <div className="feature-card__spacer" />
                 {showFootnote && card.footnote ? (
                   <p className="feature-card__footnote">{card.footnote}</p>
+                ) : null}
+                {cardCta ? (
+                  <Button className="feature-card__cta w-full" href={cardCta.href}>
+                    {cardCta.label}
+                  </Button>
                 ) : null}
               </div>
             </SurfaceCard>

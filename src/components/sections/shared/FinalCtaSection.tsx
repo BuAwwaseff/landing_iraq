@@ -13,11 +13,12 @@ type FinalCtaSectionProps = {
 
 export function FinalCtaSection({ content, tone = 'player' }: FinalCtaSectionProps) {
   const glowPhrases =
-    tone === 'partner'
-      ? ['Partner', 'partner', 'Agent', 'agent', 'الشراكة', 'شريك', 'وكيل']
+    content.highlightPhrases ??
+    (tone === 'partner'
+      ? ['Partner', 'partner', 'Agent', 'agent']
       : tone === 'player'
-        ? ['Start', 'start', 'Rewards', 'Bonus', 'ابدأ', 'مكافآت']
-        : ['FAQ', 'Players', 'Partnership', 'اللاعبين', 'الشراكة'];
+        ? ['Start', 'start', 'Rewards', 'Bonus']
+        : ['FAQ', 'Players', 'Partnership']);
 
   return (
     <section className={`cta-section cta-section--${tone} section-pad`} id={content.id}>

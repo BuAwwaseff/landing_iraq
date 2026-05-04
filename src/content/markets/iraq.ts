@@ -60,7 +60,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
     },
     footer: {
       description:
-        'سواء كنت هنا للرياضة أو الكازينو أو العروض، تمنحك MELBET العراق تجربة أسرع وأوضح وجاهزة للهاتف من أول خطوة.',
+        'سواء جئت للمباريات أو ألعاب الكازينو أو العروض، ابدأ بسرعة وتحرك بين الأقسام من الهاتف من دون تعقيد.',
       links: [
         { label: 'الرئيسية', href: '/' },
         { label: 'الشراكة', href: '/partnership' },
@@ -77,8 +77,9 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'top',
         eyebrow: 'تجربة اللاعبين',
         title: 'رياضة أقوى، كازينو أوسع، ومكافآت تبدأ من أول خطوة.',
+        highlightPhrases: ['رياضة', 'كازينو', 'مكافآت'],
         description:
-          'ادخل إلى مباريات اليوم، ألعاب الكازينو، والهدايا التي ترفع بداية اللعب. تسجيل سريع، وصول سهل من الهاتف، وتجربة واضحة بين الرياضة والكازينو والعروض.',
+          'ابدأ بمباريات اليوم، جرّب ألعاب الكازينو، واستفد من الهدايا التي ترفع أول جلسة لعب. التسجيل سريع، والتنقل بين الرياضة والكازينو والعروض يتم بخطوات قليلة من الهاتف.',
         primaryCta: {
           label: 'ابدأ من الرياضة',
           href: '#sports',
@@ -107,8 +108,8 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         ],
         stageBadge: 'واجهة الليلة',
         stageChips: ['كرة القدم', 'كازينو حي', 'مكافآت'],
-        stageTitle: 'إيقاع مباراة، ألعاب مباشرة، ومسار واضح للعروض',
-        stageNote: 'الواجهة مبنية لتبدأ من الرياضة ثم توسع التجربة إلى الكازينو والعروض دون تشتيت.',
+        stageTitle: 'كرة قدم الليلة، ألعاب مباشرة، ومكافآت تضيف قيمة لبدايتك.',
+        stageNote: 'ابدأ من المباريات، انتقل إلى الكازينو، أو خذ العرض الذي يناسب جلستك التالية.',
         stageMetrics: [
           { label: 'مباراة اليوم', value: '21:45' },
           { label: 'هدايا البداية', value: 'Up to 200%' },
@@ -125,7 +126,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             eyebrow: 'Casino',
             title: 'طاولات وألعاب سريعة',
-            description: 'تنقل مريح بين السلوات، البث المباشر، والألعاب الفورية داخل مساحة واحدة.',
+            description: 'انتقل بين السلوات، البث المباشر، والألعاب الفورية من دون أن تتوقف الجلسة.',
             metric: 'Top',
           },
           {
@@ -164,7 +165,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           },
           {
             title: 'Weekend Rush',
-            note: 'دفعة عودة نهاية الأسبوع مع بطاقة مكافآت أوضح داخل الواجهة.',
+            note: 'دفعة نهاية الأسبوع لمن يريد العودة بهدايا أقوى قبل الجلسة التالية.',
             imageSrc: '/home/hero/promo.png',
             imageAlt: 'عرض Weekend Rush للمكافآت',
             gameIcon: 'JP',
@@ -181,15 +182,16 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'sports',
         eyebrow: 'الرياضة',
         title: 'المباراة تبدأ قبل صافرة البداية.',
+        highlightPhrases: ['المباراة'],
         description:
-          'هذا القسم يبيع أجواء كرة القدم كما يحبها اللاعب: مباريات قوية، متابعة حية، ورهانات مجانية تدعم قرار البداية في الوقت المناسب.',
+          'تابع قمم كرة القدم، ادخل إلى الرهان الحي، واستفد من رهانات مجانية وهدايا حول المباريات الكبيرة.',
         cards: [
           {
             eyebrow: 'Football',
             title: 'تركيز على مباريات كرة القدم',
-            description: 'مباريات اليوم، قمم الدوريات، وأجواء يوم المباراة داخل تجربة واضحة وسهلة القراءة.',
+            description: 'مباريات اليوم، قمم الدوريات، وأجواء يوم المباراة لمن يريد الدخول مباشرة إلى أهم المواجهات.',
             metric: 'Top',
-            footnote: 'مصمم لمن يريد الوصول إلى أهم المواجهات بسرعة.',
+            footnote: 'ادخل إلى أهم المواجهات من دون لف طويل.',
           },
           {
             eyebrow: 'Live',
@@ -216,9 +218,10 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
       casino: {
         id: 'casino',
         eyebrow: 'الكازينو',
-        title: 'قسم ألعاب متنوع بجودة أقرب لما يبحث عنه اللاعب.',
+        title: 'ألعاب أكثر لمن يريد السلوات والطاولات والبث الحي في مكان واحد.',
+        highlightPhrases: ['السلوات', 'البث الحي'],
         description:
-          'من السلوات إلى الطاولات والبث المباشر، التجربة هنا تعطي اللاعب مساحة واضحة لاختيار نوع اللعب مع حضور قوي لأفضل مزودي الألعاب.',
+          'انتقل من السلوات إلى الطاولات والبث المباشر، واختر نوع اللعب الذي يناسب جلستك مع حضور قوي لأفضل مزودي الألعاب.',
         cards: [
           {
             eyebrow: 'Slots',
@@ -229,7 +232,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             eyebrow: 'Live casino',
             title: 'كازينو حي بطابع مباشر',
-            description: 'طاولات وبث حي لمن يريد تجربة أقرب إلى أجواء الصالة مع وضوح أفضل في الهاتف.',
+            description: 'طاولات وبث حي لمن يريد أجواء أقرب إلى الصالة من الهاتف.',
             metric: 'Live',
           },
           {
@@ -240,19 +243,20 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           },
           {
             eyebrow: 'Providers',
-            title: 'أقوى مزودي الألعاب في العالم',
-            description: 'فئات كازينو مبنية حول جودة الألعاب وتنوعها، لا حول أسماء كثيرة بلا قيمة حقيقية.',
+            title: 'مزودون معروفون في ألعاب الكازينو',
+            description: 'اختر من بين ألعاب قوية ومتنوعة بدل الضياع في أسماء كثيرة بلا فائدة.',
             metric: 'Top',
-            footnote: 'التجربة تبرز النوع المناسب بسرعة بدل إغراق اللاعب بالخيارات.',
+            footnote: 'ابدأ بالنوع الذي يناسبك من أول نظرة.',
           },
         ],
       },
       promos: {
         id: 'offers',
         eyebrow: 'العروض والهدايا',
-        title: 'عروض تشجع البداية والعودة، لا مجرد ضوضاء على الصفحة.',
+        title: 'عروض تدعم أول جلسة أو تعيدك في الوقت المناسب.',
+        highlightPhrases: ['عروض', 'أول جلسة'],
         description:
-          'الوعود هنا مباشرة: هدايا، لفات مجانية، رهانات مجانية، ومكافأة أول إيداع حتى 200% عندما يكون العرض متاحاً.',
+          'استفد من هدايا، لفات مجانية، رهانات مجانية، ومكافأة أول إيداع حتى 200% عندما تكون الحملة مفعلة.',
         cards: [
           {
             eyebrow: 'Welcome',
@@ -285,8 +289,9 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'benefits',
         eyebrow: 'المزايا',
         title: 'ما يحتاجه اللاعب فعلاً ليكمل رحلته.',
+        highlightPhrases: ['اللاعب', 'رحلته'],
         description:
-          'القاعدة هنا عملية: تسجيل أسرع، مزودون موثوقون، دعم أوضح، وتجربة هاتف لا تجعل اللاعب يقاتل مع الواجهة.',
+          'سجل بسرعة، احصل على المساعدة عند الحاجة، وتحرك بين الرياضة والكازينو والعروض من دون تعطيل.',
         cards: [
           {
             eyebrow: 'Signup',
@@ -296,20 +301,20 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           },
           {
             eyebrow: 'Support',
-            title: 'خدمة ودعم بجودة أفضل',
-            description: 'لغة مباشرة، نقاط مساعدة واضحة، وتجربة تشعر اللاعب أن الوصول إلى الدعم سهل عندما يحتاجه.',
+            title: 'دعم قريب عند الحاجة',
+            description: 'إذا احتجت مساعدة في العرض أو الحساب أو الخطوة التالية، ستصل إلى الدعم بسرعة.',
             metric: 'Direct',
           },
           {
             eyebrow: 'Mobile',
-            title: 'مبنية للهاتف أولاً',
-            description: 'تسلسل بصري قوي، أزرار سهلة اللمس، ومسافات مدروسة تمنع الزحام على الشاشات الصغيرة.',
+            title: 'مصممة للعب من الهاتف',
+            description: 'ابدأ، المس، وانتقل بين الأقسام بسهولة حتى على الشاشة الصغيرة.',
             metric: 'Ready',
           },
           {
             eyebrow: 'Providers',
-            title: 'مزودون معروفون وتجربة أنظف',
-            description: 'القيمة تأتي من جودة العرض وتنظيمه، لا من زيادة الكلام أو المبالغة في الوعود.',
+            title: 'مزودون يعرفهم اللاعب',
+            description: 'الأسماء القوية في الألعاب تساعدك على الدخول بثقة من أول جلسة.',
             metric: 'Trusted',
           },
         ],
@@ -318,6 +323,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'final-cta',
         eyebrow: 'ابدأ اللعب',
         title: 'اختر المسار الأقرب لك وادخل التجربة من القسم المناسب.',
+        highlightPhrases: ['اختر', 'التجربة'],
         description:
           'ابدأ من الرياضة إذا كنت تبحث عن طاقة يوم المباراة، أو انتقل إلى الكازينو إذا كنت تريد جلسات أسرع، أو راجع العروض قبل أول خطوة.',
         primaryCta: {
@@ -339,8 +345,9 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'top',
         eyebrow: 'فرص الشراكة',
         title: 'شراكة أو وكالة؟ اختر الطريق الذي يناسب جمهورك أو شبكتك المحلية.',
+        highlightPhrases: ['شراكة', 'وكالة', 'اختر'],
         description:
-          'إذا كنت تملك جمهوراً، قناة، مجتمعاً، أو بنية معاملات محلية، فهذه الصفحة تشرح كيف تدخل كشريك أو كوكيل مع أدوات جاهزة، متابعة أوضح، ودعم من مديري الشراكة.',
+          'إذا كنت تملك جمهوراً، قناة، مجتمعاً، أو قدرة على إدارة معاملات محلية، اختر المسار الذي يناسب عملك وابدأ مع دعم من مدير مختص.',
         primaryCta: {
           label: 'راجع المسارات',
           href: '#routes',
@@ -369,8 +376,8 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         ],
         stageBadge: 'لوحة التشغيل',
         stageChips: ['شريك', 'وكيل', 'متابعة'],
-        stageTitle: 'بداية أوضح، أدوات جاهزة، ومسار قابل للتوسع.',
-        stageNote: 'الهيكل يشرح الفرصة بوضوح ثم يقود إلى أدوات المتابعة، خطوات البدء، ونقطة التواصل النهائية.',
+        stageTitle: 'اختر مسارك، استلم أدواتك، وابدأ بخطوات مدروسة.',
+        stageNote: 'سواء بدأت كشريك أو كوكيل، ستحصل على المسار المناسب، المتابعة، ونقطة تواصل مباشرة.',
         stageMetrics: [
           { label: 'Work routes', value: '02' },
           { label: 'Tracking', value: 'Visible' },
@@ -392,7 +399,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             eyebrow: 'Managers',
             title: 'دعم من مديري الشراكة',
-            description: 'مراجعة أفضل نموذج، مساعدة في الإطلاق، ورؤية أوضح للأداء وخيارات التوسع.',
+            description: 'مدير الشراكة يساعدك في اختيار النموذج، بدء العمل، ومتابعة النتائج.',
             metric: 'Support',
           },
         ],
@@ -400,9 +407,10 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
       benefits: {
         id: 'why-partner',
         eyebrow: 'لماذا الشراكة',
-        title: 'فرصة واقعية مبنية على أكثر من مسار ربح واحد.',
+        title: 'فرصة عملية فيها أكثر من مسار ربح.',
+        highlightPhrases: ['فرصة', 'ربح'],
         description:
-          'الصفحة لا تبيع عنواناً عاماً. هي تشرح فرصة يمكن أن تناسب صاحب جمهور أو شريك إحالة أو وكيل معاملات يبحث عن تشغيل محلي مباشر.',
+          'إذا كنت تملك جمهوراً أو تدير معاملات محلية، فهنا أكثر من طريقة للدخول وتحويل النشاط إلى فرصة عمل.',
         cards: [
           {
             eyebrow: 'Market fit',
@@ -425,8 +433,8 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           },
           {
             eyebrow: 'Visibility',
-            title: 'رؤية أوضح للحملات والتشغيل',
-            description: 'تتبع، أدوات، ومواد تسويقية تقلل العشوائية وتساعد على قياس ما يتحرك فعلاً.',
+            title: 'تتبع يبيّن أين تتحرك النتائج',
+            description: 'تابع مصدر الحركة، استجابة الحملات، وما يستحق التوسع في مدينتك أو جمهورك.',
             metric: 'Track',
           },
         ],
@@ -435,6 +443,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'routes',
         eyebrow: 'المسارات',
         title: 'طريقان واضحان للدخول: Partner أو Agent.',
+        highlightPhrases: ['Partner', 'Agent'],
         description:
           'اختر الطريق الذي يعكس طريقة عملك الحقيقية. الشريك يركز على الترويج والجمهور، والوكيل يركز على المعاملات والتشغيل المحلي.',
         cards: [
@@ -472,8 +481,9 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'tools',
         eyebrow: 'الأدوات',
         title: 'ما الذي يحصل عليه الشريك أو الوكيل بعد البداية؟',
+        highlightPhrases: ['الشريك', 'الوكيل'],
         description:
-          'الأدوات هنا تدعم البيع والتشغيل معاً: مواد جاهزة، متابعة أوضح، ومساندة عملية من المديرين عند إطلاق الحملات أو إدارة النشاط.',
+          'ابدأ بمواد تسويقية، تتبع للأداء، ودعم من مدير يساعدك في الإطلاق والمتابعة.',
         cards: [
           {
             eyebrow: 'Marketing kit',
@@ -484,7 +494,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             eyebrow: 'Tracking',
             title: 'تتبع ومتابعة أداء',
-            description: 'رؤية أوضح لمصدر الحركة، الحملة الأفضل، وما الذي يستحق التوسع أو التعديل.',
+            description: 'اعرف مصدر الحركة، الحملة الأقوى، والخطوة التالية للتوسع أو التعديل.',
             metric: 'Visible',
           },
           {
@@ -504,9 +514,10 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
       steps: {
         id: 'onboarding',
         eyebrow: 'خطوات البدء',
-        title: 'من أول رسالة حتى أول تشغيل، الطريق واضح.',
+        title: 'من أول رسالة إلى بداية التشغيل، كل خطوة لها مكانها.',
+        highlightPhrases: ['أول رسالة', 'بداية التشغيل'],
         description:
-          'المسار مصمم ليبدأ بسرعة لكن من دون غموض: تحديد نوع الفرصة، مراجعة الشروط المناسبة، ثم الإطلاق والمتابعة مع المدير.',
+          'حدد مسارك، راجع الاتفاق المناسب، استلم الأدوات، ثم ابدأ العمل مع متابعة من المدير.',
         items: [
           {
             step: '01',
@@ -526,7 +537,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             step: '04',
             title: 'ابدأ العمل والمتابعة',
-            description: 'أطلق الحملة أو التشغيل المحلي مع متابعة أوضح للأداء والاستجابة.',
+            description: 'ابدأ الترويج أو إدارة المعاملات المحلية، ثم تابع الأداء والاستجابة مع المدير.',
           },
           {
             step: '05',
@@ -539,8 +550,9 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'final-cta',
         eyebrow: 'ابدأ المحادثة',
         title: 'إذا كنت جاهزاً للشراكة أو الوكالة، اختر قناتك وابدأ مباشرة.',
+        highlightPhrases: ['الشراكة', 'الوكالة', 'ابدأ'],
         description:
-          'تحدث مع الفريق عبر تيليجرام أو واتساب لعرض جمهورك، مدينتك، أو طريقة التشغيل التي تناسبك. بعدها يتم توجيهك إلى المسار الأنسب لك.',
+          'أرسل تفاصيل جمهورك أو مدينتك أو طريقة العمل عبر تيليجرام أو واتساب، وسيتم توجيهك إلى المسار المناسب.',
         helperText:
           'نطاقات العمولات والشروط النهائية تحدد بعد مراجعة حجم الجمهور، المدينة، وسائل الدفع، وخطة التشغيل.',
         primaryCta: {
@@ -562,14 +574,15 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
     faq: {
       seo: {
         title: 'MELBET العراق | الأسئلة الشائعة',
-        description: 'أسئلة سريعة للاعبين وللشركاء داخل صفحة FAQ متناسقة مع نفس الهوية العراقية.',
+        description: 'إجابات سريعة للاعبين وللشركاء والوكلاء داخل صفحة واحدة.',
       },
       intro: {
         id: 'top',
         eyebrow: 'FAQ',
         title: 'إجابات سريعة للاعبين والشركاء من دون لف طويل.',
+        highlightPhrases: ['إجابات سريعة', 'اللاعبين', 'الشركاء'],
         description:
-          'إذا كنت تريد فهم ما الذي ينتظرك كلاعب أو كشريك أو كوكيل، فهذه الصفحة تختصر أهم النقاط بطريقة سهلة للمسح والقراءة.',
+          'إذا كنت تريد الإجابة السريعة قبل أن تبدأ كلاعب أو تتواصل كشريك، ستجد أهم النقاط هنا.',
         primaryCta: {
           label: 'أسئلة اللاعبين',
           href: '#players',
@@ -583,11 +596,12 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'players',
         eyebrow: 'Players',
         title: 'أسئلة اللاعبين',
-        description: 'ما الذي يريد اللاعب معرفته قبل أن يبدأ؟ الإجابات هنا مباشرة وقصيرة.',
+        highlightPhrases: ['اللاعبين'],
+        description: 'أسئلة سريعة قبل أن تبدأ اللعب أو تختار العرض المناسب.',
         items: [
           {
             question: 'ماذا أجد في الصفحة الرئيسية؟',
-            answer: 'ستجد الرياضة، الكازينو، العروض، والمزايا مرتبة بشكل يقودك سريعاً إلى القسم الذي يهمك.',
+            answer: 'ستجد الرياضة، الكازينو، العروض، والمزايا التي تساعدك على البدء بسرعة من القسم الذي يهمك.',
           },
           {
             question: 'هل يوجد تركيز على كرة القدم؟',
@@ -599,11 +613,11 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           },
           {
             question: 'هل الكازينو مناسب للهاتف؟',
-            answer: 'نعم، تقسيم الكازينو مبني ليبقى واضحاً وسريعاً على الهاتف في السلوات والألعاب الحية والطاولة.',
+            answer: 'نعم، ستنتقل بين السلوات والألعاب الحية والطاولات بسهولة من الهاتف.',
           },
           {
-            question: 'هل توجد مساعدة إذا احتجت إلى توضيح؟',
-            answer: 'الرحلة نفسها مبنية لتكون أوضح، ويمكنك دائماً استخدام صفحة الأسئلة أو صفحة الشراكة للوصول إلى نقطة التواصل المناسبة.',
+            question: 'إلى أين أذهب إذا احتجت مساعدة؟',
+            answer: 'يمكنك الرجوع إلى الدعم أو الانتقال إلى صفحة الشراكة إذا كنت تريد التواصل مع الفريق.',
           },
         ],
       },
@@ -611,6 +625,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'partnership',
         eyebrow: 'Partnership',
         title: 'أسئلة الشراكة',
+        highlightPhrases: ['الشراكة'],
         description: 'أسئلة أساسية عن Partner وAgent والاتفاقات والأدوات المتاحة.',
         items: [
           {
@@ -638,9 +653,10 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
       support: {
         id: 'support',
         eyebrow: 'الدعم',
-        title: 'هل تريد طريقاً أوضح بعد قراءة الأسئلة؟',
+        title: 'هل تريد الخطوة التالية بعد الأسئلة؟',
+        highlightPhrases: ['الخطوة التالية'],
         description:
-          'ارجع إلى الرئيسية إذا كنت لاعباً، أو انتقل إلى صفحة الشراكة إذا كنت تريد فرصة Partner أو Agent مع نقطة تواصل مباشرة.',
+          'ارجع إلى الرئيسية إذا كنت تريد الرياضة أو الكازينو، أو انتقل إلى الشراكة إذا كنت تبحث عن مسار شريك أو وكيل.',
         primaryCta: {
           label: 'العودة إلى الرئيسية',
           href: '/',
@@ -658,11 +674,11 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
     direction: getLocaleDirection('en'),
     seo: {
       title: 'MELBET Iraq',
-      description: 'A dark Iraq market landing with sports, casino, rewards, and partnership routes in one polished system.',
+      description: 'Sports, casino, rewards, and partnership routes for Iraq players, partners, and agents.',
     },
     brand: {
       name: 'MELBET Iraq',
-      tag: 'Sports, casino, and rewards in a mobile-first premium flow.',
+      tag: 'Sports, casino, and rewards with fast mobile access.',
     },
     ui: {
       languageLabel: 'Switch language',
@@ -697,7 +713,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
     },
     footer: {
       description:
-        'Whether you are here for sports, casino, or rewards, MELBET Iraq is built to give you a faster, clearer, mobile-ready experience from the first step.',
+        'Whether you came for sports, casino, or rewards, start fast and move between sections from mobile without slowing down.',
       links: [
         { label: 'Home', href: '/' },
         { label: 'Partnership', href: '/partnership' },
@@ -708,14 +724,15 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
     home: {
       seo: {
         title: 'MELBET Iraq | Home',
-        description: 'Sports, casino, rewards, and fast access in a premium Iraq player experience.',
+        description: 'Sports, casino, gifts, and rewards for players who want to start fast from mobile.',
       },
       hero: {
         id: 'top',
         eyebrow: 'Player Experience',
         title: 'Stronger sports, deeper casino, and rewards that start from the first move.',
+        highlightPhrases: ['sports', 'casino', 'rewards'],
         description:
-          'Step into match-day action, casino play, and promo offers built to convert fast. The flow is simple, mobile-ready, and clearly split between sports, casino, and rewards.',
+          'Start with match-day football, move into casino play, and pick up gifts, free spins, or free bets along the way. Sign up fast, switch sections easily, and play from mobile without slowing down.',
         primaryCta: {
           label: 'Start with Sports',
           href: '#sports',
@@ -734,18 +751,18 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             value: '2 in 1',
             label: 'Sports and casino',
-            note: 'Clear access to both core player routes',
+            note: 'Quick access to both core player routes',
           },
           {
             value: '360°',
             label: 'Mobile-ready flow',
-            note: 'Built to stay sharp on smaller screens',
+            note: 'Moves smoothly on smaller screens',
           },
         ],
         stageBadge: 'Tonight',
         stageChips: ['Football', 'Live casino', 'Rewards'],
-        stageTitle: 'Match energy, live games, and a cleaner route to offers.',
-        stageNote: 'The journey starts with sports and expands naturally into casino and promos without losing clarity.',
+        stageTitle: 'Match-day football, live casino, and rewards worth using.',
+        stageNote: 'Start with the fixtures, jump into casino sessions, or grab a promo before the next kickoff.',
         stageMetrics: [
           { label: 'Kickoff', value: '21:45' },
           { label: 'Launch offer', value: 'Up to 200%' },
@@ -757,12 +774,12 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
             title: 'Football stays in front',
             description: 'Big matches, live betting, and the kind of match-day energy players expect first.',
             metric: 'Live',
-            footnote: 'Built around the events that drive fast decisions.',
+            footnote: 'Go straight to the fixtures most players open first.',
           },
           {
             eyebrow: 'Casino',
             title: 'Live tables and fast sessions',
-            description: 'Move quickly between slots, live tables, and instant games inside one clear surface.',
+            description: 'Move quickly between slots, live tables, and instant games without breaking the session.',
             metric: 'Top',
           },
           {
@@ -801,7 +818,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           },
           {
             title: 'Weekend Rush',
-            note: 'A rewards card built for late-week return play and stronger re-entry.',
+            note: 'Extra value for players coming back late in the week.',
             imageSrc: '/home/hero/promo.png',
             imageAlt: 'Weekend Rush reward offer',
             gameIcon: 'JP',
@@ -818,15 +835,16 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'sports',
         eyebrow: 'Sports',
         title: 'The match starts before kickoff.',
+        highlightPhrases: ['match'],
         description:
-          'This section sells football the right way: strong fixtures, live momentum, and free bet energy around the matches players care about most.',
+          'Follow strong fixtures, live momentum, and free bet offers around the matches players care about most.',
         cards: [
           {
             eyebrow: 'Football',
-            title: 'A clear football-first route',
-            description: 'Today’s biggest matches, top leagues, and match-day focus inside a clean mobile-friendly layout.',
+            title: 'Football first from the biggest fixtures',
+            description: 'Today’s biggest matches, top leagues, and the match-day focus most players open first.',
             metric: 'Top',
-            footnote: 'Made for fast entry into the most requested fixtures.',
+            footnote: 'Jump into the biggest fixtures without wasting time.',
           },
           {
             eyebrow: 'Live',
@@ -852,9 +870,10 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
       casino: {
         id: 'casino',
         eyebrow: 'Casino',
-        title: 'A broader game floor with better structure.',
+        title: 'More casino options for every kind of session.',
+        highlightPhrases: ['casino'],
         description:
-          'From slots to live tables, the casino flow is built to help players find the right category fast while keeping top global providers in view.',
+          'Move from slots to live tables and back again while keeping top providers within reach.',
         cards: [
           {
             eyebrow: 'Slots',
@@ -871,13 +890,13 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             eyebrow: 'Table games',
             title: 'Classic table play',
-            description: 'Roulette, blackjack, and table categories organized for easier browsing and better clarity.',
+            description: 'Roulette, blackjack, and table categories grouped so you can move between them fast.',
             metric: 'Classic',
           },
           {
             eyebrow: 'Providers',
             title: 'Top game providers',
-            description: 'The experience is positioned around quality and variety, not long lists that slow the decision down.',
+            description: 'Strong providers keep the line-up interesting across slots, live tables, and instant play.',
             metric: 'Top',
           },
         ],
@@ -885,9 +904,10 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
       promos: {
         id: 'offers',
         eyebrow: 'Promos and Gifts',
-        title: 'Offers that support the player journey instead of crowding it.',
+        title: 'Rewards that add value to the first session or the comeback.',
+        highlightPhrases: ['Rewards', 'first session'],
         description:
-          'The message is simple: gifts, free spins, free bets, and a first deposit bonus up to 200% when the right campaign is live.',
+          'Pick up gifts, free spins, free bets, and a first deposit bonus up to 200% when the campaign is live.',
         cards: [
           {
             eyebrow: 'Welcome',
@@ -905,7 +925,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             eyebrow: 'Free spins',
             title: 'Free spins on selected titles',
-            description: 'A clean way to add extra reason to test or revisit casino play.',
+            description: 'Extra spins on selected titles give players one more reason to try a game or come back.',
             metric: 'Spins',
           },
           {
@@ -920,8 +940,9 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'benefits',
         eyebrow: 'Benefits',
         title: 'What players actually need to keep moving.',
+        highlightPhrases: ['players', 'need'],
         description:
-          'This foundation stays practical: faster sign-up, cleaner support points, reliable providers, and a mobile flow that does not get in the way.',
+          'Sign up fast, get help when you need it, and move between sports, casino, and promos without friction.',
         cards: [
           {
             eyebrow: 'Signup',
@@ -931,20 +952,20 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           },
           {
             eyebrow: 'Support',
-            title: 'Better service feel',
-            description: 'Direct wording, cleaner help points, and a journey that feels easier to understand.',
+            title: 'Support when you need it',
+            description: 'Get direct help and simple answers when you want to move, claim an offer, or keep playing.',
             metric: 'Direct',
           },
           {
             eyebrow: 'Mobile',
-            title: 'Built for mobile first',
-            description: 'Tap-friendly buttons, stronger rhythm, and spacing that works better on smaller screens.',
+            title: 'Made for mobile play',
+            description: 'Tap, move, and switch sections easily even when you stay on a smaller screen.',
             metric: 'Ready',
           },
           {
             eyebrow: 'Providers',
-            title: 'Trusted provider positioning',
-            description: 'The promise comes from quality, organization, and clarity instead of inflated claims.',
+            title: 'Providers players already know',
+            description: 'Well-known names across the line-up help the offer feel worth the click from the first session.',
             metric: 'Trusted',
           },
         ],
@@ -952,9 +973,10 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
       finalCta: {
         id: 'final-cta',
         eyebrow: 'Start Playing',
-        title: 'Choose the route that fits your mood and move in fast.',
+        title: 'Pick your next move and start now.',
+        highlightPhrases: ['next move', 'start'],
         description:
-          'Go straight to sports for match-day intensity, jump into casino for faster sessions, or check the promos before you make your first move.',
+          'Open sports for tonight’s fixtures, jump into casino play, or check the latest promo before you start.',
         primaryCta: {
           label: 'Go to Sports',
           href: '#sports',
@@ -968,14 +990,15 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
     partnership: {
       seo: {
         title: 'MELBET Iraq | Partnership',
-        description: 'A cleaner Iraq partnership page for partners and agents with stronger routes, tools, and contact CTA.',
+        description: 'Partnership and agent routes for Iraq with manager support, tools, and direct contact.',
       },
       hero: {
         id: 'top',
         eyebrow: 'Partnership Opportunities',
         title: 'Partner or agent? Choose the route that matches your audience or local network.',
+        highlightPhrases: ['Partner', 'agent', 'Choose'],
         description:
-          'If you run traffic, a community, a channel, or a local transaction setup, this page shows how to enter as an affiliate partner or agent with better visibility, ready tools, and support from dedicated managers.',
+          'If you run traffic, a community, a channel, or local transactions, choose the route that fits your work and start with manager support.',
         primaryCta: {
           label: 'View the Routes',
           href: '#routes',
@@ -1004,8 +1027,8 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         ],
         stageBadge: 'Operating View',
         stageChips: ['Partner', 'Agent', 'Tracking'],
-        stageTitle: 'A cleaner start, ready support, and a route built to scale.',
-        stageNote: 'The structure explains the opportunity first, then moves into tools, onboarding, and a direct contact close.',
+        stageTitle: 'Choose your route, get your tools, and move with support.',
+        stageNote: 'Start as a partner or local agent, get the right setup, and keep moving with manager follow-up.',
         stageMetrics: [
           { label: 'Work routes', value: '02' },
           { label: 'Tracking', value: 'Visible' },
@@ -1015,13 +1038,13 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             eyebrow: 'Partner',
             title: 'Promo code and traffic route',
-            description: 'Built for affiliate partners who promote to their own audience, fan base, or community.',
+            description: 'For affiliate partners who promote to their own audience, fan base, or community.',
             metric: 'Promo',
           },
           {
             eyebrow: 'Agent',
             title: 'Local transaction route',
-            description: 'Built for local operators who manage deposits, withdrawals, and player-facing transaction flow.',
+            description: 'For local operators who manage deposits, withdrawals, and player-facing transaction flow.',
             metric: 'Cashier',
           },
           {
@@ -1036,8 +1059,9 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'why-partner',
         eyebrow: 'Why Partner',
         title: 'A real opportunity built around more than one earning route.',
+        highlightPhrases: ['opportunity', 'earning route'],
         description:
-          'This page is not selling a vague label. It is designed to help affiliate partners and local agents understand where they fit and how the work model can start cleanly.',
+          'Bring traffic, manage local transactions, or do both through an offer that gives you more than one way to earn.',
         cards: [
           {
             eyebrow: 'Market fit',
@@ -1060,8 +1084,8 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           },
           {
             eyebrow: 'Visibility',
-            title: 'Clearer operating visibility',
-            description: 'Tracking, support, and campaign structure make it easier to see what is working and what should grow.',
+            title: 'Tracking that shows real movement',
+            description: 'Follow traffic, campaign response, and operating activity so you know where to push next.',
             metric: 'Track',
           },
         ],
@@ -1070,6 +1094,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'routes',
         eyebrow: 'Routes',
         title: 'Two clear ways in: Partner or Agent.',
+        highlightPhrases: ['Partner', 'Agent'],
         description:
           'Choose the route that matches how you actually work. Partners drive promotion and traffic. Agents run transactions and local player operations.',
         cards: [
@@ -1107,8 +1132,9 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'tools',
         eyebrow: 'Tools',
         title: 'What do partners and agents get after they start?',
+        highlightPhrases: ['partners', 'agents', 'start'],
         description:
-          'The support layer is built for both sales and operations: marketing tools, tracking visibility, campaign guidance, and practical help from managers.',
+          'Start with marketing tools, tracking, and manager support that help with promotion, setup, and day-to-day follow-up.',
         cards: [
           {
             eyebrow: 'Marketing kit',
@@ -1119,7 +1145,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             eyebrow: 'Tracking',
             title: 'Tracking and performance visibility',
-            description: 'Get a clearer view of traffic sources, campaign movement, and where to improve or scale.',
+            description: 'Track traffic sources, campaign movement, and the next place to push or adjust.',
             metric: 'Visible',
           },
           {
@@ -1139,9 +1165,10 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
       steps: {
         id: 'onboarding',
         eyebrow: 'Onboarding',
-        title: 'From first message to first live setup, the path is clear.',
+        title: 'From first message to launch, the route stays practical.',
+        highlightPhrases: ['first message', 'launch'],
         description:
-          'The goal is fast entry without confusion: define the route, review the right terms, receive the tools, launch, then scale with manager support.',
+          'Choose the right route, review the terms, receive the tools, and go live with manager support.',
         items: [
           {
             step: '01',
@@ -1161,7 +1188,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
           {
             step: '04',
             title: 'Launch and track',
-            description: 'Start promotion or local operations with clearer follow-up on activity and response.',
+            description: 'Start promoting or handling local transactions, then track the response with your manager.',
           },
           {
             step: '05',
@@ -1174,8 +1201,9 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'final-cta',
         eyebrow: 'Start the Conversation',
         title: 'If you are ready to work as a partner or agent, choose your channel and move now.',
+        highlightPhrases: ['partner', 'agent', 'move now'],
         description:
-          'Use Telegram or WhatsApp to show your audience, city coverage, or operating setup. From there, the team can direct you to the right route.',
+          'Send your audience details, city coverage, or operating setup on Telegram or WhatsApp and the team will point you to the right route.',
         helperText:
           'Final terms and commission ranges are reviewed after checking audience size, city coverage, payment method, and operating plan.',
         primaryCta: {
@@ -1197,14 +1225,15 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
     faq: {
       seo: {
         title: 'MELBET Iraq | FAQ',
-        description: 'Short answers for players, partners, and agents inside one cleaner FAQ page.',
+        description: 'Short answers for players, partners, and agents in one Iraq FAQ.',
       },
       intro: {
         id: 'top',
         eyebrow: 'FAQ',
-        title: 'Quick answers for players and partnership leads without the long scroll.',
+        title: 'Quick answers before you play or reach out as a partner.',
+        highlightPhrases: ['Quick answers', 'play', 'partner'],
         description:
-          'If you want the short version of what the player offer or partnership route looks like, this page keeps the answers easy to scan.',
+          'Check the key points first, then move to the player route or the partnership route that fits you.',
         primaryCta: {
           label: 'Player FAQ',
           href: '#players',
@@ -1218,11 +1247,12 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'players',
         eyebrow: 'Players',
         title: 'Player FAQ',
-        description: 'The questions most players ask before they choose a route.',
+        highlightPhrases: ['Player'],
+        description: 'Short answers players usually want before the first session.',
         items: [
           {
             question: 'What will I find on the home page?',
-            answer: 'A cleaner player route across sports, casino, promos, and the key benefits that support the first session.',
+            answer: 'Sports, casino, promos, and the key player benefits that help you start fast.',
           },
           {
             question: 'Is football a core part of the offer?',
@@ -1233,12 +1263,12 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
             answer: 'Gifts, free spins, free bets, and a first deposit bonus up to 200% when the matching campaign is active.',
           },
           {
-            question: 'Is the casino experience built for mobile?',
-            answer: 'Yes. The casino layout is built to stay clear and fast on smaller screens across slots, live games, and tables.',
+            question: 'Does casino play work well on mobile?',
+            answer: 'Yes. Slots, live games, and tables are easy to open and move between from a smaller screen.',
           },
           {
-            question: 'Where do I go if I need more clarity?',
-            answer: 'The FAQ gives the short answers first, and the partnership page can also direct you to the contact point when needed.',
+            question: 'Where do I go if I need help?',
+            answer: 'Go back to the support CTA or move to the partnership page if you want direct contact with the team.',
           },
         ],
       },
@@ -1246,6 +1276,7 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
         id: 'partnership',
         eyebrow: 'Partnership',
         title: 'Partnership FAQ',
+        highlightPhrases: ['Partnership'],
         description: 'Short answers around the partner route, the agent route, and how deals are handled.',
         items: [
           {
@@ -1273,9 +1304,10 @@ const iraqContentByLocale: Record<Locale, MarketContent> = {
       support: {
         id: 'support',
         eyebrow: 'Support',
-        title: 'Need the next step after the FAQ?',
+        title: 'Need your next move after the FAQ?',
+        highlightPhrases: ['next move'],
         description:
-          'Go back to the player home if you want the sports and casino offer, or move to the partnership page if you want the partner or agent route.',
+          'Go back to home for sports, casino, and promos, or open the partnership page if you want the partner or agent route.',
         primaryCta: {
           label: 'Back to Home',
           href: '/',

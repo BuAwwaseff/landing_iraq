@@ -16,6 +16,8 @@ function isExternalLink(href: string) {
 }
 
 export function PartnershipContactCtaSection({ content }: PartnershipContactCtaSectionProps) {
+  const glowPhrases = content.highlightPhrases ?? ['Partner', 'partner', 'Agent', 'agent'];
+
   return (
     <section className="partner-cta-section section-pad" id={content.id}>
       <div aria-hidden="true" className="partner-cta-section__scene">
@@ -32,15 +34,12 @@ export function PartnershipContactCtaSection({ content }: PartnershipContactCtaS
             variant="stage"
           >
             <div className="partner-contact">
-              <div className="text-start">
+              <div className="partner-contact__copy text-start">
                 <div data-reveal>
                   <Eyebrow>{content.eyebrow}</Eyebrow>
                 </div>
                 <h2 className="section-heading mt-4 text-start" data-reveal>
-                  <HighlightedText
-                    phrases={['Partner', 'partner', 'Agent', 'agent', 'الشراكة', 'شريك', 'وكيل']}
-                    text={content.title}
-                  />
+                  <HighlightedText phrases={glowPhrases} text={content.title} />
                 </h2>
                 <p className="body-lead mt-4 max-w-2xl text-start" data-reveal>
                   {content.description}
